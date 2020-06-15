@@ -26,7 +26,7 @@ Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
     Route::get('/show/id/{id}', 'Api\\UsersController@show')->name('show.id')->where('id', '[0-9]+');
     Route::get('/show/nome/{nome}', 'Api\\UsersController@showNome')->name('show.nome');
     Route::get('/destroy/{id}', 'Api\\UsersController@destroy')->name('destroy');
-    Route::post('/update/{id}', 'Api\\UsersController@update')->name('update');
+    Route::put('/update/{id}', 'Api\\UsersController@update')->name('update');
 });
 
 
@@ -36,7 +36,7 @@ Route::group(['prefix' => 'filmes', 'as' => 'filmes.'], function () {
     Route::get('/show/id/{id}', 'Api\\FilmesController@show')->name('show.id')->where('id', '[0-9]+');
     Route::get('/show/titulo/{titulo}', 'Api\\FilmesController@showTitulo')->name('show.titulo');
     Route::get('/destroy/{id}', 'Api\\FilmesController@destroy')->name('destroy');
-    Route::post('/update/{id}', 'Api\\FilmesController@update')->name('update');
+    Route::put('/update/{id}', 'Api\\FilmesController@update')->name('update');
 });
 
 Route::group(['prefix' => 'classificacoes', 'as' => 'classificacao.'], function () {
@@ -45,7 +45,7 @@ Route::group(['prefix' => 'classificacoes', 'as' => 'classificacao.'], function 
     Route::get('/show/id/{id}', 'Api\\ClassificacoesController@show')->name('show.id')->where('id', '[0-9]+');
     Route::get('/show/titulo/{titulo}', 'Api\\ClassificacoesController@showTitulo')->name('show.titulo');
     Route::get('/destroy/{id}', 'Api\\ClassificacoesController@destroy')->name('destroy');
-    Route::post('/update/{id}', 'Api\\ClassificacoesController@update')->name('update');
+    Route::put('/update/{id}', 'Api\\ClassificacoesController@update')->name('update');
 });
 
 
